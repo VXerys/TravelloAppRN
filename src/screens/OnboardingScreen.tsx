@@ -1,7 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View, ImageBackground, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const OnboardingScreen = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -14,7 +17,10 @@ const OnboardingScreen = () => {
           <Text style={styles.subtitle}>
             Life's too short to stay in one place. Find your next favorite city, beach, or mountain and let's get moving!
           </Text>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity 
+            style={styles.button}
+            onPress={() => navigation.navigate('Home' as never)}
+            >
             <Text style={styles.buttonText}>Start Exploring</Text>
           </TouchableOpacity>
         </View>
