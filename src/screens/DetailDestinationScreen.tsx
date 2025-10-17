@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text,ImageBackground,  ScrollView, StatusBar, View, StyleSheet } from 'react-native';
+import { ScrollView, StatusBar, View, StyleSheet } from 'react-native';
 import { useRoute, RouteProp } from '@react-navigation/native';
 import { Destination } from '../types/destination';
 import HeaderSection from '../components/DetailDestination/HeaderSection';
@@ -47,9 +47,9 @@ const styles = StyleSheet.create({
     marginTop: -32,
     paddingTop: 24,
     paddingHorizontal: 20,
-    marginBottom: 90,
+    marginBottom: 110,
   },
   scrollContent: {
-    paddingBottom: 100,
+    paddingBottom: 120,
   },
 });

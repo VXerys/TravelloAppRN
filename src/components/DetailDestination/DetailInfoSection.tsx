@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { Destination } from '../../types/destination';
 
 const DetailInfoSection: React.FC<{ destination: Destination }> = ({ destination }) => {

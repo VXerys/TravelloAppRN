@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, FlatList } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { Destination } from '../../types/destination';
 import RecommendationCard from './RecommendationCard';
 

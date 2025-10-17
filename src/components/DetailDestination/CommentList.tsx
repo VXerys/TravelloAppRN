@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity, FlatList } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
 const comments = [
   {
@@ -38,7 +38,11 @@ const CommentList: React.FC = () => {
         </View>
       ))}
       {comments.length > 1 && (
-        <TouchableOpacity style={styles.viewAllBtn} onPress={() => setShowAll(!showAll)}>
+        <TouchableOpacity
+          accessibilityRole="button"
+          style={styles.viewAllBtn}
+          onPress={() => setShowAll(prev => !prev)}
+        >
           <Text style={styles.viewAllText}>{showAll ? 'View Less' : 'View All'}</Text>
         </TouchableOpacity>
       )}

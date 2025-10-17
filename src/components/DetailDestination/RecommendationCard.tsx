@@ -12,8 +12,12 @@ const RecommendationCard: React.FC<{ activity: Activity }> = ({ activity }) => {
       />
       <View style={styles.infoContainer}>
         <Text style={styles.title}>{activity.name}</Text>
-        <Text style={styles.desc}>{activity.description}</Text>
-        <Text style={styles.detail}>{activity.duration} • {activity.price}</Text>
+        <Text style={styles.desc} numberOfLines={2}>
+          {activity.description}
+        </Text>
+        <Text style={styles.detail}>
+          {activity.duration} • {activity.price}
+        </Text>
       </View>
     </TouchableOpacity>
   );
@@ -22,44 +26,38 @@ const RecommendationCard: React.FC<{ activity: Activity }> = ({ activity }) => {
 const styles = StyleSheet.create({
   card: {
     flexDirection: 'row',
-    backgroundColor: '#FFFFFF',
-    borderRadius: 16,
+    backgroundColor: '#0E0E0E',
+    borderRadius: 20,
+    padding: 12,
     marginBottom: 16,
-    overflow: 'hidden',
     alignItems: 'center',
-    elevation: 3,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
   },
   image: {
-    width: 100,
-    height: 100,
-    borderTopLeftRadius: 16,
-    borderBottomLeftRadius: 16,
-    backgroundColor: '#eee',
+    width: 88,
+    height: 88,
+    borderRadius: 24,
+    backgroundColor: '#1C1C1C',
+    marginRight: 12,
   },
   infoContainer: {
     flex: 1,
-    padding: 16,
-    justifyContent: 'center',
+    paddingVertical: 6,
   },
   title: {
     fontSize: 16,
-    fontWeight: 'bold',
-    color: '#333',
+    fontWeight: '700',
+    color: '#FFFFFF',
     marginBottom: 4,
   },
   desc: {
     fontSize: 12,
-    color: '#666',
+    color: '#CFCFCF',
     marginBottom: 8,
     lineHeight: 16,
   },
   detail: {
-    fontSize: 14,
-    color: '#FF7043',
+    fontSize: 13,
+    color: '#FF6A3D',
     fontWeight: 'bold',
   },
 });
